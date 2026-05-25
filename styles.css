@@ -990,8 +990,10 @@ a { color: inherit; text-decoration: none; }
   z-index: 2;
 }
 
-/* Hover/tilt is now driven entirely by CSS vars set from JS — no need for
-   :hover override of `transform` itself. */
+/* CSS fallback hover lift + JS adds cursor-following tilt on top */
+.mod-card:hover {
+  --lift: -8px;
+}
 .mod-card:hover::before {
   background:
     linear-gradient(155deg,
