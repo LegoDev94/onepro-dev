@@ -1743,11 +1743,11 @@ a { color: inherit; text-decoration: none; }
 }
 
 /* Row positions calibrated to the 5 icons in the image */
-.df-1 { top: 19%; }
-.df-2 { top: 35%; }
-.df-3 { top: 51%; }
-.df-4 { top: 67%; }
-.df-5 { top: 83%; }
+.df-1 { top: 16%; }
+.df-2 { top: 32%; }
+.df-3 { top: 48%; }
+.df-4 { top: 64%; }
+.df-5 { top: 80%; }
 
 /* ============= REAL-TIME OPERATIONS — image-background variant
    USA map (with cyan/lime routes) is baked into the LEFT half of
