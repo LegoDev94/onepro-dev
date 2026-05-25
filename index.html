@@ -700,9 +700,10 @@
 </footer>
 
 <script>
-/* Cursor-following 3D tilt on module cards */
+/* Cursor-following 3D tilt on module cards.
+   Sets CSS variables --tilt-x, --tilt-y, --lift consumed by .mod-card. */
 window.addEventListener('DOMContentLoaded', function () {
-  var MAX = 8;
+  var MAX = 7; // degrees per axis at the edge
   var grid = document.querySelector('.module-grid');
   if (!grid) { console.warn('[tilt] .module-grid not found'); return; }
 
@@ -712,20 +713,20 @@ window.addEventListener('DOMContentLoaded', function () {
     var r = card.getBoundingClientRect();
     var px = (e.clientX - r.left) / r.width  - 0.5;
     var py = (e.clientY - r.top)  / r.height - 0.5;
-    var rx = (py *  MAX * 2).toFixed(2);
-    var ry = (-px * MAX * 2).toFixed(2);
-    card.style.transition = 'transform 60ms ease-out';
-    card.style.transform  =
-      'translateY(-8px) rotateX(' + rx + 'deg) rotateY(' + ry + 'deg) scale(1.02)';
+    card.style.setProperty('--tilt-x', (py *  MAX * 2).toFixed(2) + 'deg');
+    card.style.setProperty('--tilt-y', (-px * MAX * 2).toFixed(2) + 'deg');
+    card.style.setProperty('--lift', '-8px');
+    card.style.transition = 'transform 80ms ease-out';
   });
 
   grid.addEventListener('mouseout', function (e) {
     var card = e.target.closest && e.target.closest('.mod-card');
     if (!card) return;
-    // only reset when the cursor actually left the card (not moved to a child)
     if (card.contains(e.relatedTarget)) return;
-    card.style.transition = 'transform 0.4s cubic-bezier(.2,.7,.3,1)';
-    card.style.transform  = '';
+    card.style.removeProperty('--tilt-x');
+    card.style.removeProperty('--tilt-y');
+    card.style.removeProperty('--lift');
+    card.style.transition = '';
   });
 
   console.log('[tilt] initialised on', grid.children.length, 'cards');

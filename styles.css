@@ -908,15 +908,19 @@ a { color: inherit; text-decoration: none; }
 .mod-card {
   --c: 20px;
   --bw: 2px;       /* border ring thickness */
+  --tilt-x: 0deg;  /* cursor-driven rotateX */
+  --tilt-y: 0deg;  /* cursor-driven rotateY */
+  --lift: 0px;     /* cursor-driven lift */
   position: relative;
   padding: 28px 24px 24px;
   display: flex;
   flex-direction: column;
   gap: 16px;
   min-height: 540px;
-  transition: transform 0.4s cubic-bezier(.2,.7,.3,1);
+  transition: transform 0.35s cubic-bezier(.2,.7,.3,1);
   transform-style: preserve-3d;
   will-change: transform;
+  transform: translateY(var(--lift)) rotateX(var(--tilt-x)) rotateY(var(--tilt-y));
 }
 
 /* Layer 1 — OUTER border ring (the bright cyan gradient frame) */
@@ -986,9 +990,8 @@ a { color: inherit; text-decoration: none; }
   z-index: 2;
 }
 
-.mod-card:hover {
-  transform: translateY(-8px);
-}
+/* Hover/tilt is now driven entirely by CSS vars set from JS — no need for
+   :hover override of `transform` itself. */
 .mod-card:hover::before {
   background:
     linear-gradient(155deg,
@@ -1075,9 +1078,7 @@ a { color: inherit; text-decoration: none; }
    Must redeclare background here because the base .mod-card:hover::before
    rule has higher specificity than .mod-card--img::before and otherwise
    wins on hover, overpainting the image with a cyan gradient. */
-.mod-card--img:hover {
-  transform: translateY(-8px);
-}
+/* image-bg cards use the same var-driven transform from .mod-card */
 .mod-card--img:hover::before {
   background: url("images/cart_bg.png") center / 100% 100% no-repeat;
   filter:
