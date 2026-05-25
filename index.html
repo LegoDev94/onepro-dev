@@ -700,53 +700,36 @@
 </footer>
 
 <script>
-/* Cursor-following 3D tilt on module cards.
-   Card leans toward the cursor — instant follow, ~7 degrees max per axis. */
-(function () {
-  function init() {
-    const MAX = 7;
-    const cards = document.querySelectorAll('.mod-card');
-    if (!cards.length) return;
+/* Cursor-following 3D tilt on module cards — event delegation, no rAF */
+window.addEventListener('DOMContentLoaded', function () {
+  var MAX = 8;
+  var grid = document.querySelector('.module-grid');
+  if (!grid) { console.warn('[tilt] .module-grid not found'); return; }
 
-    cards.forEach((card) => {
-      let rect = null;
-      let raf = 0;
-      let lx = 0, ly = 0;
+  grid.addEventListener('mousemove', function (e) {
+    var card = e.target.closest && e.target.closest('.mod-card');
+    if (!card) return;
+    var r = card.getBoundingClientRect();
+    var px = (e.clientX - r.left) / r.width  - 0.5;
+    var py = (e.clientY - r.top)  / r.height - 0.5;
+    var rx = (py *  MAX * 2).toFixed(2);
+    var ry = (-px * MAX * 2).toFixed(2);
+    card.style.transition = 'transform 60ms ease-out';
+    card.style.transform  =
+      'translateY(-8px) rotateX(' + rx + 'deg) rotateY(' + ry + 'deg) scale(1.02)';
+  });
 
-      function apply() {
-        raf = 0;
-        const rx = (ly * MAX * 2).toFixed(2);
-        const ry = (-lx * MAX * 2).toFixed(2);
-        card.style.transform =
-          `translateY(-8px) rotateX(${rx}deg) rotateY(${ry}deg) scale(1.015)`;
-      }
+  grid.addEventListener('mouseout', function (e) {
+    var card = e.target.closest && e.target.closest('.mod-card');
+    if (!card) return;
+    // only reset when the cursor actually left the card (not moved to a child)
+    if (card.contains(e.relatedTarget)) return;
+    card.style.transition = 'transform 0.4s cubic-bezier(.2,.7,.3,1)';
+    card.style.transform  = '';
+  });
 
-      card.addEventListener('mouseenter', () => {
-        rect = card.getBoundingClientRect();
-        // disable transition for instant cursor follow
-        card.style.transition = 'transform 0s';
-      });
-      card.addEventListener('mousemove', (e) => {
-        if (!rect) rect = card.getBoundingClientRect();
-        lx = (e.clientX - rect.left) / rect.width  - 0.5;
-        ly = (e.clientY - rect.top)  / rect.height - 0.5;
-        if (!raf) raf = requestAnimationFrame(apply);
-      });
-      card.addEventListener('mouseleave', () => {
-        // restore CSS transition for smooth return to rest
-        card.style.transition = '';
-        card.style.transform = '';
-        rect = null;
-      });
-    });
-  }
-
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', init);
-  } else {
-    init();
-  }
-})();
+  console.log('[tilt] initialised on', grid.children.length, 'cards');
+});
 </script>
 
 </body>
