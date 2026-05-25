@@ -2188,7 +2188,7 @@ a { color: inherit; text-decoration: none; }
   text-transform: uppercase;
 }
 .integration-row {
-  --c: 18px;
+  --c: 20px;
   --bw: 2px;
   position: relative;
   padding: 26px 32px;
@@ -2202,7 +2202,7 @@ a { color: inherit; text-decoration: none; }
   position: absolute;
   inset: 0;
   z-index: 0;
-  background: linear-gradient(155deg, #6BE9FF 0%, #00A0EE 45%, #0070CC 75%, #4DDCFF 100%);
+  background: linear-gradient(155deg, #6BE9FF, #00C8FF 22%, #0070CC 50%, #00A0EE 78%, #7DEEFF);
   clip-path: polygon(
     var(--c) 0, calc(100% - var(--c)) 0,
     100% var(--c), 100% calc(100% - var(--c)),
@@ -2210,8 +2210,9 @@ a { color: inherit; text-decoration: none; }
     0 calc(100% - var(--c)), 0 var(--c)
   );
   filter:
-    drop-shadow(0 22px 36px rgba(0, 0, 0, 0.6))
-    drop-shadow(0 0 28px rgba(0, 140, 230, 0.18));
+    drop-shadow(0 36px 44px rgba(0, 0, 0, 0.7))
+    drop-shadow(0 10px 28px rgba(0, 100, 200, 0.35))
+    drop-shadow(0 0 44px rgba(0, 160, 240, 0.2));
 }
 .integration-row::after {
   content: "";
@@ -2219,9 +2220,9 @@ a { color: inherit; text-decoration: none; }
   inset: var(--bw);
   z-index: 1;
   background:
-    linear-gradient(180deg, rgba(91, 228, 255, 0.10), transparent 30%),
-    linear-gradient(0deg, rgba(0,0,0,0.5), transparent 50%),
-    linear-gradient(180deg, #001638 0%, #00050F 100%);
+    linear-gradient(180deg, rgba(91, 228, 255, 0.18) 0%, rgba(0, 180, 255, 0.06) 8%, transparent 24%),
+    linear-gradient(0deg, rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.14) 18%, transparent 40%),
+    linear-gradient(180deg, #002255 0%, #00153A 30%, #00081C 65%, #00050F 100%);
   clip-path: polygon(
     calc(var(--c) - var(--bw)) 0, calc(100% - var(--c) + var(--bw)) 0,
     100% calc(var(--c) - var(--bw)), 100% calc(100% - var(--c) + var(--bw)),
