@@ -898,7 +898,7 @@ a { color: inherit; text-decoration: none; }
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 10px;
-  perspective: 1400px;  /* enables 3D space for cursor-following tilt */
+  perspective: 1000px;  /* 3D space for cursor-following tilt */
 }
 
 /* ---- octagonal chamfer reused on cards ----
