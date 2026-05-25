@@ -2300,11 +2300,9 @@ a { color: inherit; text-decoration: none; }
   height: 100%;
   z-index: 0;
   pointer-events: none;
-  opacity: 0.55;
+  opacity: 0.6;
   mix-blend-mode: screen;
-  /* very subtle edge fade — keep network visible across whole footer */
-  -webkit-mask-image: linear-gradient(180deg, rgba(0,0,0,0.4) 0%, #000 12%, #000 90%, rgba(0,0,0,0.4) 100%);
-  mask-image:         linear-gradient(180deg, rgba(0,0,0,0.4) 0%, #000 12%, #000 90%, rgba(0,0,0,0.4) 100%);
+  overflow: visible;  /* roads can extend past viewBox bounds */
 }
 .footer-map .fm-nodes > g {
   transform-origin: center;

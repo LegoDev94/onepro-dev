@@ -554,7 +554,7 @@
 
 <!-- ============= FOOTER ============= -->
 <footer class="footer">
-  <!-- Interactive chaotic network spanning the full footer area -->
+  <!-- Realistic road network — smooth curves, off-screen extensions -->
   <svg class="footer-map" viewBox="0 0 1600 280" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
     <defs>
       <radialGradient id="fmNodeGlow" cx="50%" cy="50%" r="50%">
@@ -568,64 +568,72 @@
       </radialGradient>
     </defs>
 
-    <!-- Chaotic web of dashed routes spanning the entire footer -->
-    <g stroke="rgba(91,211,255,0.22)" stroke-width="0.7" fill="none" stroke-dasharray="3 4">
-      <path id="fmRoute1" d="M60 80 L320 50 L600 130 L920 70 L1240 180 L1540 110"/>
-      <path id="fmRoute2" d="M120 250 L440 200 L760 250 L1080 190 L1380 240"/>
-      <path id="fmRoute3" d="M60 80 L120 250 L440 200 L320 50"/>
-      <path id="fmRoute4" d="M600 130 L760 250 L920 70 L1080 190 L1240 180"/>
-      <path id="fmRoute5" d="M320 50 L600 130 L440 200 L760 250"/>
-      <path id="fmRoute6" d="M1540 110 L1380 240 L1080 190 L920 70"/>
-      <path id="fmRoute7" d="M120 250 L320 50 L600 130 L920 70 L1240 180"/>
-      <path id="fmRoute8" d="M1540 110 L1240 180 L760 250 L440 200 L60 80"/>
+    <!-- ROAD BASE — wider faint stroke gives "paved highway" feel -->
+    <g fill="none" stroke="rgba(91,211,255,0.08)" stroke-width="6" stroke-linecap="round">
+      <path d="M-150 75   C 200 40, 460 95, 720 70  S 1180 30, 1480 95  S 1750 130, 1900 110"/>
+      <path d="M-100 215  C 240 250, 520 195, 820 230  S 1240 270, 1520 220 S 1800 195, 1900 220"/>
+      <path d="M-120 145  C 180 130, 380 175, 600 155  S 980 110, 1240 165 S 1600 215, 1900 180"/>
+      <path d="M240 -80   C 220 60, 280 140, 250 230 S 290 360, 270 460"/>
+      <path d="M880 -60   C 900 50, 850 130, 880 210 S 920 350, 880 460"/>
+      <path d="M1340 -70  C 1320 80, 1380 150, 1340 240 S 1380 350, 1340 450"/>
     </g>
 
-    <!-- Scattered city nodes across full footer area -->
+    <!-- DASHED ROAD MARKINGS on top of base -->
+    <g fill="none" stroke="rgba(91,211,255,0.32)" stroke-width="0.7" stroke-dasharray="5 4">
+      <path id="fmRoadA" d="M-150 75   C 200 40, 460 95, 720 70  S 1180 30, 1480 95  S 1750 130, 1900 110"/>
+      <path id="fmRoadB" d="M-100 215  C 240 250, 520 195, 820 230  S 1240 270, 1520 220 S 1800 195, 1900 220"/>
+      <path id="fmRoadC" d="M-120 145  C 180 130, 380 175, 600 155  S 980 110, 1240 165 S 1600 215, 1900 180"/>
+      <path id="fmRoadD" d="M240 -80   C 220 60, 280 140, 250 230 S 290 360, 270 460"/>
+      <path id="fmRoadE" d="M880 -60   C 900 50, 850 130, 880 210 S 920 350, 880 460"/>
+      <path id="fmRoadF" d="M1340 -70  C 1320 80, 1380 150, 1340 240 S 1380 350, 1340 450"/>
+    </g>
+
+    <!-- INTERCHANGE/CITY NODES at major intersections -->
     <g class="fm-nodes">
-      <g><circle cx="60"   cy="80"  r="10" fill="url(#fmNodeGlow)"/><circle cx="60"   cy="80"  r="2.5" fill="#5BD3FF"/></g>
-      <g><circle cx="320"  cy="50"  r="10" fill="url(#fmNodeGlow)"/><circle cx="320"  cy="50"  r="2.5" fill="#5BD3FF"/></g>
-      <g><circle cx="600"  cy="130" r="11" fill="url(#fmNodeGlow)"/><circle cx="600"  cy="130" r="3"   fill="#5BD3FF"/></g>
-      <g><circle cx="920"  cy="70"  r="10" fill="url(#fmNodeGlow)"/><circle cx="920"  cy="70"  r="2.5" fill="#5BD3FF"/></g>
-      <g><circle cx="1240" cy="180" r="11" fill="url(#fmNodeGlow)"/><circle cx="1240" cy="180" r="3"   fill="#5BD3FF"/></g>
-      <g><circle cx="1540" cy="110" r="10" fill="url(#fmNodeGlow)"/><circle cx="1540" cy="110" r="2.5" fill="#5BD3FF"/></g>
-      <g><circle cx="120"  cy="250" r="9"  fill="url(#fmNodeGlow)"/><circle cx="120"  cy="250" r="2.5" fill="#5BD3FF"/></g>
-      <g><circle cx="440"  cy="200" r="10" fill="url(#fmNodeGlow)"/><circle cx="440"  cy="200" r="2.5" fill="#5BD3FF"/></g>
-      <g><circle cx="760"  cy="250" r="11" fill="url(#fmNodeGlow)"/><circle cx="760"  cy="250" r="3"   fill="#5BD3FF"/></g>
-      <g><circle cx="1080" cy="190" r="10" fill="url(#fmNodeGlow)"/><circle cx="1080" cy="190" r="2.5" fill="#5BD3FF"/></g>
-      <g><circle cx="1380" cy="240" r="9"  fill="url(#fmNodeGlow)"/><circle cx="1380" cy="240" r="2.5" fill="#5BD3FF"/></g>
+      <g><circle cx="245"  cy="55"  r="10" fill="url(#fmNodeGlow)"/><circle cx="245"  cy="55"  r="2.5" fill="#5BD3FF"/></g>
+      <g><circle cx="260"  cy="140" r="11" fill="url(#fmNodeGlow)"/><circle cx="260"  cy="140" r="3"   fill="#5BD3FF"/></g>
+      <g><circle cx="250"  cy="225" r="10" fill="url(#fmNodeGlow)"/><circle cx="250"  cy="225" r="2.5" fill="#5BD3FF"/></g>
+      <g><circle cx="600"  cy="155" r="11" fill="url(#fmNodeGlow)"/><circle cx="600"  cy="155" r="3"   fill="#5BD3FF"/></g>
+      <g><circle cx="720"  cy="70"  r="10" fill="url(#fmNodeGlow)"/><circle cx="720"  cy="70"  r="2.5" fill="#5BD3FF"/></g>
+      <g><circle cx="820"  cy="230" r="10" fill="url(#fmNodeGlow)"/><circle cx="820"  cy="230" r="2.5" fill="#5BD3FF"/></g>
+      <g><circle cx="880"  cy="135" r="11" fill="url(#fmNodeGlow)"/><circle cx="880"  cy="135" r="3"   fill="#5BD3FF"/></g>
+      <g><circle cx="1240" cy="165" r="11" fill="url(#fmNodeGlow)"/><circle cx="1240" cy="165" r="3"   fill="#5BD3FF"/></g>
+      <g><circle cx="1340" cy="80"  r="10" fill="url(#fmNodeGlow)"/><circle cx="1340" cy="80"  r="2.5" fill="#5BD3FF"/></g>
+      <g><circle cx="1360" cy="235" r="10" fill="url(#fmNodeGlow)"/><circle cx="1360" cy="235" r="2.5" fill="#5BD3FF"/></g>
+      <g><circle cx="1480" cy="95"  r="9"  fill="url(#fmNodeGlow)"/><circle cx="1480" cy="95"  r="2.5" fill="#5BD3FF"/></g>
     </g>
 
-    <!-- Trucks travelling chaotic routes -->
+    <!-- TRUCKS on the highways -->
     <g class="fm-trucks">
       <circle r="3" fill="url(#fmTruckGlow)">
-        <animateMotion dur="16s" repeatCount="indefinite" rotate="auto"><mpath href="#fmRoute1"/></animateMotion>
+        <animateMotion dur="20s" repeatCount="indefinite" rotate="auto"><mpath href="#fmRoadA"/></animateMotion>
       </circle>
       <circle r="3" fill="url(#fmTruckGlow)">
-        <animateMotion dur="16s" begin="-5.3s" repeatCount="indefinite" rotate="auto"><mpath href="#fmRoute1"/></animateMotion>
-      </circle>
-      <circle r="2.8" fill="url(#fmTruckGlow)">
-        <animateMotion dur="18s" repeatCount="indefinite" rotate="auto"><mpath href="#fmRoute2"/></animateMotion>
-      </circle>
-      <circle r="2.8" fill="url(#fmTruckGlow)">
-        <animateMotion dur="18s" begin="-9s" repeatCount="indefinite" rotate="auto"><mpath href="#fmRoute2"/></animateMotion>
-      </circle>
-      <circle r="2.5" fill="url(#fmTruckGlow)">
-        <animateMotion dur="13s" begin="-4s" repeatCount="indefinite" rotate="auto"><mpath href="#fmRoute3"/></animateMotion>
-      </circle>
-      <circle r="2.5" fill="url(#fmTruckGlow)">
-        <animateMotion dur="15s" begin="-7s" repeatCount="indefinite" rotate="auto"><mpath href="#fmRoute4"/></animateMotion>
-      </circle>
-      <circle r="2.5" fill="url(#fmTruckGlow)">
-        <animateMotion dur="14s" begin="-2s" repeatCount="indefinite" rotate="auto"><mpath href="#fmRoute5"/></animateMotion>
-      </circle>
-      <circle r="2.5" fill="url(#fmTruckGlow)">
-        <animateMotion dur="17s" begin="-11s" repeatCount="indefinite" rotate="auto"><mpath href="#fmRoute6"/></animateMotion>
+        <animateMotion dur="20s" begin="-7s" repeatCount="indefinite" rotate="auto"><mpath href="#fmRoadA"/></animateMotion>
       </circle>
       <circle r="3" fill="url(#fmTruckGlow)">
-        <animateMotion dur="22s" begin="-13s" repeatCount="indefinite" rotate="auto"><mpath href="#fmRoute7"/></animateMotion>
+        <animateMotion dur="20s" begin="-14s" repeatCount="indefinite" rotate="auto"><mpath href="#fmRoadA"/></animateMotion>
+      </circle>
+      <circle r="2.8" fill="url(#fmTruckGlow)">
+        <animateMotion dur="22s" repeatCount="indefinite" rotate="auto"><mpath href="#fmRoadB"/></animateMotion>
+      </circle>
+      <circle r="2.8" fill="url(#fmTruckGlow)">
+        <animateMotion dur="22s" begin="-11s" repeatCount="indefinite" rotate="auto"><mpath href="#fmRoadB"/></animateMotion>
+      </circle>
+      <circle r="2.8" fill="url(#fmTruckGlow)">
+        <animateMotion dur="18s" repeatCount="indefinite" rotate="auto"><mpath href="#fmRoadC"/></animateMotion>
+      </circle>
+      <circle r="2.8" fill="url(#fmTruckGlow)">
+        <animateMotion dur="18s" begin="-9s" repeatCount="indefinite" rotate="auto"><mpath href="#fmRoadC"/></animateMotion>
       </circle>
       <circle r="2.5" fill="url(#fmTruckGlow)">
-        <animateMotion dur="20s" begin="-6s" repeatCount="indefinite" rotate="auto"><mpath href="#fmRoute8"/></animateMotion>
+        <animateMotion dur="16s" begin="-3s" repeatCount="indefinite" rotate="auto"><mpath href="#fmRoadD"/></animateMotion>
+      </circle>
+      <circle r="2.5" fill="url(#fmTruckGlow)">
+        <animateMotion dur="14s" begin="-5s" repeatCount="indefinite" rotate="auto"><mpath href="#fmRoadE"/></animateMotion>
+      </circle>
+      <circle r="2.5" fill="url(#fmTruckGlow)">
+        <animateMotion dur="17s" begin="-8s" repeatCount="indefinite" rotate="auto"><mpath href="#fmRoadF"/></animateMotion>
       </circle>
     </g>
   </svg>
