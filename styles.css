@@ -987,8 +987,7 @@ a { color: inherit; text-decoration: none; }
 }
 
 .mod-card:hover {
-  /* TEST: static tilt — if you see this, :hover works */
-  transform: translateY(-8px) rotateX(4deg) rotateY(-6deg) scale(1.02);
+  transform: translateY(-8px);
 }
 .mod-card:hover::before {
   background:
@@ -1077,8 +1076,7 @@ a { color: inherit; text-decoration: none; }
    rule has higher specificity than .mod-card--img::before and otherwise
    wins on hover, overpainting the image with a cyan gradient. */
 .mod-card--img:hover {
-  /* TEST: static tilt — if you see this, :hover + transform works on img cards */
-  transform: translateY(-8px) rotateX(4deg) rotateY(-6deg) scale(1.02);
+  transform: translateY(-8px);
 }
 .mod-card--img:hover::before {
   background: url("images/cart_bg.png") center / 100% 100% no-repeat;
