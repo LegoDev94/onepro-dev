@@ -554,6 +554,81 @@
 
 <!-- ============= FOOTER ============= -->
 <footer class="footer">
+  <!-- Interactive minimalist map background — trucks travelling routes -->
+  <svg class="footer-map" viewBox="0 0 1600 280" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+    <defs>
+      <radialGradient id="fmNodeGlow" cx="50%" cy="50%" r="50%">
+        <stop offset="0%"   stop-color="#5BD3FF" stop-opacity="0.9"/>
+        <stop offset="100%" stop-color="#5BD3FF" stop-opacity="0"/>
+      </radialGradient>
+      <radialGradient id="fmTruckGlow" cx="50%" cy="50%" r="50%">
+        <stop offset="0%"   stop-color="#FFFFFF" stop-opacity="1"/>
+        <stop offset="40%"  stop-color="#BFEBFF" stop-opacity="0.9"/>
+        <stop offset="100%" stop-color="#5BD3FF" stop-opacity="0"/>
+      </radialGradient>
+    </defs>
+
+    <!-- Subtle USA-shaped outline spread across the footer width -->
+    <path d="M200 100 Q260 60 340 70 L440 60 L580 50 L720 55 L880 65 L1020 80 L1140 105 L1220 130 L1240 165 L1180 195 L1080 215 L940 220 L780 215 L640 210 L500 205 L380 195 L280 175 L220 145 Z"
+      fill="none" stroke="rgba(91,211,255,0.14)" stroke-width="1"/>
+
+    <!-- Route web — dashed connection lines -->
+    <g stroke="rgba(91,211,255,0.22)" stroke-width="0.7" fill="none" stroke-dasharray="3 4">
+      <path id="fmRoute1" d="M280 120 L500 90 L740 100 L1000 110 L1180 130"/>
+      <path id="fmRoute2" d="M280 120 L420 180 L640 190 L880 200 L1100 200"/>
+      <path id="fmRoute3" d="M740 100 L880 200"/>
+      <path id="fmRoute4" d="M1000 110 L1100 200"/>
+      <path id="fmRoute5" d="M500 90 L640 190"/>
+    </g>
+
+    <!-- City nodes with subtle pulse -->
+    <g class="fm-nodes">
+      <g><circle cx="280"  cy="120" r="10" fill="url(#fmNodeGlow)"/><circle cx="280"  cy="120" r="2.5" fill="#5BD3FF"/></g>
+      <g><circle cx="500"  cy="90"  r="10" fill="url(#fmNodeGlow)"/><circle cx="500"  cy="90"  r="2.5" fill="#5BD3FF"/></g>
+      <g><circle cx="740"  cy="100" r="11" fill="url(#fmNodeGlow)"/><circle cx="740"  cy="100" r="3"   fill="#5BD3FF"/></g>
+      <g><circle cx="1000" cy="110" r="10" fill="url(#fmNodeGlow)"/><circle cx="1000" cy="110" r="2.5" fill="#5BD3FF"/></g>
+      <g><circle cx="1180" cy="130" r="9"  fill="url(#fmNodeGlow)"/><circle cx="1180" cy="130" r="2.5" fill="#5BD3FF"/></g>
+      <g><circle cx="420"  cy="180" r="9"  fill="url(#fmNodeGlow)"/><circle cx="420"  cy="180" r="2.5" fill="#5BD3FF"/></g>
+      <g><circle cx="640"  cy="190" r="10" fill="url(#fmNodeGlow)"/><circle cx="640"  cy="190" r="3"   fill="#5BD3FF"/></g>
+      <g><circle cx="880"  cy="200" r="9"  fill="url(#fmNodeGlow)"/><circle cx="880"  cy="200" r="2.5" fill="#5BD3FF"/></g>
+      <g><circle cx="1100" cy="200" r="9"  fill="url(#fmNodeGlow)"/><circle cx="1100" cy="200" r="2.5" fill="#5BD3FF"/></g>
+    </g>
+
+    <!-- Trucks travelling routes (bright pulses with light trails) -->
+    <g class="fm-trucks">
+      <circle r="3" fill="url(#fmTruckGlow)">
+        <animateMotion dur="14s" repeatCount="indefinite" rotate="auto">
+          <mpath href="#fmRoute1"/>
+        </animateMotion>
+      </circle>
+      <circle r="3" fill="url(#fmTruckGlow)">
+        <animateMotion dur="14s" begin="-4.6s" repeatCount="indefinite" rotate="auto">
+          <mpath href="#fmRoute1"/>
+        </animateMotion>
+      </circle>
+      <circle r="3" fill="url(#fmTruckGlow)">
+        <animateMotion dur="18s" repeatCount="indefinite" rotate="auto">
+          <mpath href="#fmRoute2"/>
+        </animateMotion>
+      </circle>
+      <circle r="2.5" fill="url(#fmTruckGlow)">
+        <animateMotion dur="11s" begin="-3s" repeatCount="indefinite" rotate="auto">
+          <mpath href="#fmRoute3"/>
+        </animateMotion>
+      </circle>
+      <circle r="2.5" fill="url(#fmTruckGlow)">
+        <animateMotion dur="13s" begin="-6s" repeatCount="indefinite" rotate="auto">
+          <mpath href="#fmRoute4"/>
+        </animateMotion>
+      </circle>
+      <circle r="2.5" fill="url(#fmTruckGlow)">
+        <animateMotion dur="16s" begin="-9s" repeatCount="indefinite" rotate="auto">
+          <mpath href="#fmRoute5"/>
+        </animateMotion>
+      </circle>
+    </g>
+  </svg>
+
   <div class="footer-grid">
     <div class="f-brand">
       <a href="#" class="logo">
