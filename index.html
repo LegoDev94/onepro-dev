@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>ONE PRO Developing — All-in-One Carrier Operating System</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;600;700;800;900&family=Chakra+Petch:wght@300;400;500;600;700&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Atmospheric backgrounds -->
+<div class="bg-grid" aria-hidden="true"></div>
+<div class="bg-scanline" aria-hidden="true"></div>
+<div class="bg-glow bg-glow-1" aria-hidden="true"></div>
+<div class="bg-glow bg-glow-2" aria-hidden="true"></div>
+<div class="bg-noise" aria-hidden="true"></div>
+
+<!-- ============= NAVIGATION ============= -->
+<header class="nav">
+  <div class="nav-inner">
+    <a href="#" class="logo">
+      <img src="images/logo.png" alt="ONE PRO DEVELOPING" class="logo-img" />
+    </a>
+
+    <nav class="nav-menu">
+      <a href="#" class="nav-link active">HOME</a>
+      <a href="#features" class="nav-link">FEATURES</a>
+      <a href="#solutions" class="nav-link">SOLUTIONS <span class="caret">▾</span></a>
+      <a href="#integrations" class="nav-link">INTEGRATIONS</a>
+      <a href="#pricing" class="nav-link">PRICING</a>
+      <a href="#about" class="nav-link">ABOUT US</a>
+      <a href="#contact" class="nav-link">CONTACT</a>
+    </nav>
+
+    <div class="nav-cta">
+      <button class="btn btn-ghost">LOGIN</button>
+      <button class="btn btn-primary">BOOK A DEMO</button>
+    </div>
+  </div>
+</header>
+
+<!-- ============= HERO ============= -->
+<section class="hero">
+  <div class="hero-grid">
+
+    <div class="hero-left">
+      <h1 class="hero-title">
+        <span class="line">ALL-IN-ONE</span>
+        <span class="line accent">CARRIER</span>
+        <span class="line">OPERATING SYSTEM</span>
+      </h1>
+      <p class="hero-sub">
+        Dispatch. Fleet. Accounting. Safety.<br>
+        AI Automation. Everything you need<br>
+        to run a smarter and more profitable<br>
+        auto transport business.
+      </p>
+
+      <div class="hero-actions">
+        <button class="btn btn-primary btn-lg">
+          START FREE DEMO
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M1 7h11M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="square"/></svg>
+        </button>
+        <button class="btn btn-outline btn-lg">
+          <svg width="12" height="14" viewBox="0 0 12 14" fill="currentColor"><path d="M0 0v14l12-7z"/></svg>
+          WATCH OVERVIEW
+        </button>
+      </div>
+
+      <div class="hero-stats">
+        <div class="stat">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="2" y="6" width="13" height="10"/><path d="M15 9h4l3 4v3h-7"/><circle cx="6" cy="18" r="2"/><circle cx="18" cy="18" r="2"/></svg>
+          <div><b>15,000+</b><span>DELIVERED VEHICLES</span></div>
+        </div>
+        <div class="stat">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+          <div><b>24/7</b><span>DISPATCH SUPPORT</span></div>
+        </div>
+        <div class="stat">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M3 12l4 4 4-4M3 12l4-4 4 4M13 8h8M13 12h8M13 16h8"/></svg>
+          <div><b>99.9%</b><span>UPTIME</span></div>
+        </div>
+        <div class="stat">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 2l8 4v6c0 5-3.5 9-8 10-4.5-1-8-5-8-10V6z"/><path d="M9 12l2 2 4-4"/></svg>
+          <div><b>100%</b><span>SECURE PLATFORM</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- =========== DASHBOARD MOCK =========== -->
+    <div class="dash-frame">
+      <!-- HUD corners with extended brackets -->
+      <svg class="dash-corner tl" viewBox="0 0 40 40" fill="none">
+        <path d="M2 18 L2 2 L18 2" stroke="currentColor" stroke-width="2.5" stroke-linecap="square"/>
+        <path d="M2 28 L2 36" stroke="currentColor" stroke-width="1.5" opacity="0.6"/>
+        <path d="M28 2 L36 2" stroke="currentColor" stroke-width="1.5" opacity="0.6"/>
+      </svg>
+      <svg class="dash-corner tr" viewBox="0 0 40 40" fill="none">
+        <path d="M22 2 L38 2 L38 18" stroke="currentColor" stroke-width="2.5" stroke-linecap="square"/>
+        <path d="M38 28 L38 36" stroke="currentColor" stroke-width="1.5" opacity="0.6"/>
+        <path d="M4 2 L12 2" stroke="currentColor" stroke-width="1.5" opacity="0.6"/>
+      </svg>
+      <svg class="dash-corner bl" viewBox="0 0 40 40" fill="none">
+        <path d="M2 22 L2 38 L18 38" stroke="currentColor" stroke-width="2.5" stroke-linecap="square"/>
+        <path d="M2 12 L2 4" stroke="currentColor" stroke-width="1.5" opacity="0.6"/>
+        <path d="M28 38 L36 38" stroke="currentColor" stroke-width="1.5" opacity="0.6"/>
+      </svg>
+      <svg class="dash-corner br" viewBox="0 0 40 40" fill="none">
+        <path d="M22 38 L38 38 L38 22" stroke="currentColor" stroke-width="2.5" stroke-linecap="square"/>
+        <path d="M38 12 L38 4" stroke="currentColor" stroke-width="1.5" opacity="0.6"/>
+        <path d="M4 38 L12 38" stroke="currentColor" stroke-width="1.5" opacity="0.6"/>
+      </svg>
+
+      <!-- Hero UI image with interactive map overlay -->
+      <div class="dash dash--img">
+        <img src="images/hero_ui_bg.png" alt="OnePro CRM Dashboard" class="hero-ui-bg" />
+
+        <!-- Interactive overlay positioned over the USA map area in the image -->
+        <div class="map-overlay">
+          <svg viewBox="0 0 360 200" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <radialGradient id="overlayNodeGlow" cx="50%" cy="50%" r="50%">
+                <stop offset="0%" stop-color="#5BD3FF" stop-opacity="0.9"/>
+                <stop offset="60%" stop-color="#5BD3FF" stop-opacity="0.25"/>
+                <stop offset="100%" stop-color="#5BD3FF" stop-opacity="0"/>
+              </radialGradient>
+              <radialGradient id="overlayPulse" cx="50%" cy="50%" r="50%">
+                <stop offset="0%" stop-color="#BFEBFF" stop-opacity="1"/>
+                <stop offset="100%" stop-color="#5BD3FF" stop-opacity="0"/>
+              </radialGradient>
+            </defs>
+
+            <!-- Pulsing glow rings over the static nodes in the image -->
+            <g class="overlay-nodes">
+              <g><circle cx="60" cy="80"  r="18" fill="url(#overlayNodeGlow)"/></g>
+              <g><circle cx="120" cy="70" r="20" fill="url(#overlayNodeGlow)"/></g>
+              <g><circle cx="180" cy="60" r="22" fill="url(#overlayNodeGlow)"/></g>
+              <g><circle cx="220" cy="55" r="16" fill="url(#overlayNodeGlow)"/></g>
+              <g><circle cx="260" cy="80" r="20" fill="url(#overlayNodeGlow)"/></g>
+              <g><circle cx="300" cy="95" r="16" fill="url(#overlayNodeGlow)"/></g>
+              <g><circle cx="90"  cy="125" r="18" fill="url(#overlayNodeGlow)"/></g>
+              <g><circle cx="160" cy="140" r="20" fill="url(#overlayNodeGlow)"/></g>
+              <g><circle cx="220" cy="135" r="18" fill="url(#overlayNodeGlow)"/></g>
+              <g><circle cx="270" cy="150" r="16" fill="url(#overlayNodeGlow)"/></g>
+            </g>
+
+            <!-- Animated travelling data packets along trade routes -->
+            <g class="overlay-pulses">
+              <circle r="3.5" fill="url(#overlayPulse)" class="trv-pulse">
+                <animateMotion dur="4.5s" repeatCount="indefinite"
+                  path="M60 80 L120 70 L180 60 L260 80 L300 95"/>
+              </circle>
+              <circle r="3" fill="url(#overlayPulse)" class="trv-pulse">
+                <animateMotion dur="5.5s" repeatCount="indefinite"
+                  path="M180 60 L160 140 L90 125"/>
+              </circle>
+              <circle r="3" fill="url(#overlayPulse)" class="trv-pulse">
+                <animateMotion dur="6s" repeatCount="indefinite"
+                  path="M300 95 L260 80 L220 55 L180 60"/>
+              </circle>
+              <circle r="2.5" fill="url(#overlayPulse)" class="trv-pulse">
+                <animateMotion dur="7s" repeatCount="indefinite"
+                  path="M270 150 L220 135 L160 140 L90 125"/>
+              </circle>
+            </g>
+          </svg>
+        </div>
+      </div>
+  </div>
+</section>
+
+<!-- ============= MODULES ============= -->
+<div class="section-title-bar">
+  <h2 class="section-title">
+    6 CORE MODULES. <span class="accent">ONE POWERFUL PLATFORM.</span>
+  </h2>
+</div>
+
+<section class="modules" id="features">
+  <div class="module-grid">
+
+    <!-- 01 Dispatch — image-bg variant -->
+    <article class="mod-card mod-card--img is-track">
+      <div class="mod-head">
+        <span class="mod-num">01</span>
+        <svg class="mod-icon" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="10" width="14" height="10" rx="1"/><path d="M17 13h6l5 5v2h-11"/><circle cx="9" cy="24" r="2.5"/><circle cx="22" cy="24" r="2.5"/></svg>
+      </div>
+      <h3 class="mod-title">DISPATCH MANAGEMENT</h3>
+      <ul class="mod-list">
+        <li>Gross Tracking</li>
+        <li>Broker Management</li>
+        <li>AI Trailer Visualizer</li>
+        <li>VIN Decoder</li>
+        <li>Load Tracking</li>
+        <li>Dispatch Analytics</li>
+      </ul>
+    </article>
+
+    <!-- 02 Accounting -->
+    <article class="mod-card mod-card--img">
+      <div class="mod-head">
+        <span class="mod-num">02</span>
+        <svg class="mod-icon" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="5" y="4" width="22" height="24" rx="1"/><path d="M9 10h14M9 15h14M9 20h9M21 22l2 2 4-4"/></svg>
+      </div>
+      <h3 class="mod-title">ACCOUNTING &amp; BILLING</h3>
+      <ul class="mod-list">
+        <li>Invoices &amp; Billing</li>
+        <li>Payroll Management</li>
+        <li>Statements</li>
+        <li>Payment Reminders</li>
+        <li>Debt Tracking</li>
+        <li>Financial Reports</li>
+      </ul>
+      <div class="mod-visual mod-visual--invoices">
+        <div class="inv-block">
+          <div class="inv-head">
+            <div class="inv-title">Invoices</div>
+            <div class="inv-amount">$250,300 <span class="chip paid">Paid</span></div>
+          </div>
+          <div class="inv-row"><span>INV-1001</span><span>$2,450</span><span class="chip paid">Paid</span></div>
+          <div class="inv-row"><span>INV-1002</span><span>$1,700</span><span class="chip paid">Paid</span></div>
+          <div class="inv-row"><span>INV-1003</span><span>$2,250</span><span class="chip unpaid">Unpaid</span></div>
+        </div>
+      </div>
+    </article>
+
+    <!-- 03 Safety -->
+    <article class="mod-card mod-card--img">
+      <div class="mod-head">
+        <span class="mod-num">03</span>
+        <svg class="mod-icon" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 3l11 5v8c0 7-4.5 11.5-11 13-6.5-1.5-11-6-11-13V8z"/><path d="M11 16l4 4 7-7"/></svg>
+      </div>
+      <h3 class="mod-title">SAFETY &amp; CLAIMS CENTER</h3>
+      <ul class="mod-list">
+        <li>Safety Command Center</li>
+        <li>Claims Management</li>
+        <li>AI Damage Detection</li>
+        <li>Compliance Dashboard</li>
+        <li>Violations &amp; Alerts</li>
+        <li>Document Center</li>
+      </ul>
+      <div class="mod-visual">
+        <div class="safety-row">
+          <div class="safety-score">
+            <svg viewBox="0 0 80 80">
+              <circle cx="40" cy="40" r="32" stroke="rgba(255,255,255,0.08)" stroke-width="6" fill="none"/>
+              <circle cx="40" cy="40" r="32" stroke="#22D17C" stroke-width="6" fill="none" stroke-dasharray="170 201" stroke-dashoffset="0" transform="rotate(-90 40 40)" stroke-linecap="round"/>
+              <text x="40" y="44" text-anchor="middle" fill="#fff" font-family="Orbitron" font-weight="700" font-size="20">85</text>
+            </svg>
+            <div>
+              <div class="sm-label">Safety Score</div>
+              <div class="sm-val">85 <span class="ok">● Good</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="safety-grid">
+          <div><span>Open Claims</span><b>12</b></div>
+          <div><span>Expiring Docs</span><b>23</b></div>
+        </div>
+      </div>
+    </article>
+
+    <!-- 04 Fleet -->
+    <article class="mod-card mod-card--img">
+      <div class="mod-head">
+        <span class="mod-num">04</span>
+        <svg class="mod-icon" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="8" width="18" height="14" rx="1"/><path d="M21 12h5l3 4v6h-8"/><circle cx="9" cy="25" r="2.5"/><circle cx="24" cy="25" r="2.5"/></svg>
+      </div>
+      <h3 class="mod-title">FLEET OPERATIONS</h3>
+      <ul class="mod-list">
+        <li>Fleet &amp; Asset Management</li>
+        <li>GPS &amp; Telematics</li>
+        <li>Maintenance Tracking</li>
+        <li>Fuel Analytics</li>
+        <li>Driver Management</li>
+        <li>Performance Reports</li>
+      </ul>
+      <div class="mod-visual">
+        <!-- IMAGE PLACEHOLDER: Phone with load info -->
+        <div class="img-ph img-ph--phone" data-size="140×200">
+          <div class="ph-grid"></div>
+          <div class="ph-info">
+            <div class="ph-icon">
+              <svg width="28" height="28" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="9" y="3" width="14" height="26" rx="2"/><path d="M14 26h4"/></svg>
+            </div>
+            <div class="ph-label">PHONE MOCKUP</div>
+            <div class="ph-size">140 × 200 px</div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- 06 AI (note: 05 is intentionally skipped to match reference layout) -->
+    <article class="mod-card mod-card--img">
+      <div class="mod-head">
+        <span class="mod-num">06</span>
+        <svg class="mod-icon" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="16" cy="16" r="5"/><path d="M16 3v4M16 25v4M3 16h4M25 16h4M7 7l3 3M22 22l3 3M7 25l3-3M22 10l3-3"/></svg>
+      </div>
+      <h3 class="mod-title">AI OPERATIONS HUB</h3>
+      <ul class="mod-list">
+        <li>AI Dispatcher Assisting</li>
+        <li>AI Load Recommendations</li>
+        <li>Telegram Sync</li>
+        <li>AI Dispatcher Chat</li>
+        <li>AI Documents Storage</li>
+        <li>Yard &amp; App Instructions</li>
+      </ul>
+      <div class="mod-visual mod-visual--ai">
+        <div class="ai-label">AI Insights</div>
+        <div class="ai-sub">Predicted Revenue</div>
+        <div class="ai-val">$286,750</div>
+        <div class="ai-delta">+12.5% vs last month</div>
+        <svg class="ai-chart" viewBox="0 0 160 50" preserveAspectRatio="none">
+          <defs>
+            <linearGradient id="aiGrad" x1="0" x2="0" y1="0" y2="1">
+              <stop offset="0%" stop-color="#00E5FF" stop-opacity="0.6"/>
+              <stop offset="100%" stop-color="#00E5FF" stop-opacity="0"/>
+            </linearGradient>
+          </defs>
+          <path d="M0,40 L20,35 L40,38 L60,28 L80,30 L100,18 L120,22 L140,10 L160,5 L160,50 L0,50 Z" fill="url(#aiGrad)"/>
+          <polyline points="0,40 20,35 40,38 60,28 80,30 100,18 120,22 140,10 160,5" fill="none" stroke="#00E5FF" stroke-width="1.6"/>
+        </svg>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<!-- ============= TRIO ROW ============= -->
+<section class="trio">
+ <div class="trio-grid">
+
+  <!-- Real-time Operations — image-bg variant -->
+  <div class="trio-card trio-card--rt-img">
+    <div class="trio-head">REAL-TIME OPERATIONS OVERVIEW</div>
+    <div class="rt-img-body">
+      <img src="images/REAL-TIMEOPERATIONSOVERVIEW.png" alt="" class="rt-img-bg" />
+
+      <!-- Interactive overlay on the USA map — electric pulses travelling
+           along the route web that's baked into the image -->
+      <div class="rt-map-overlay">
+        <svg viewBox="0 0 100 100" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <radialGradient id="rtSparkG" cx="50%" cy="50%" r="50%">
+              <stop offset="0%"   stop-color="#FFFFFF" stop-opacity="1"/>
+              <stop offset="40%"  stop-color="#D5FFA1" stop-opacity="0.95"/>
+              <stop offset="100%" stop-color="#22D17C" stop-opacity="0"/>
+            </radialGradient>
+            <radialGradient id="rtSparkC" cx="50%" cy="50%" r="50%">
+              <stop offset="0%"   stop-color="#FFFFFF" stop-opacity="1"/>
+              <stop offset="40%"  stop-color="#BFEBFF" stop-opacity="0.95"/>
+              <stop offset="100%" stop-color="#5BD3FF" stop-opacity="0"/>
+            </radialGradient>
+          </defs>
+
+          <!-- Electric sparks travelling along the YELLOW (lime) route -->
+          <circle r="1.6" fill="url(#rtSparkG)" class="rt-spark">
+            <animateMotion dur="4.5s" repeatCount="indefinite"
+              path="M10 87 L25 93 L40 85 L45 65 L52 55 L58 47"/>
+          </circle>
+          <circle r="1.4" fill="url(#rtSparkG)" class="rt-spark" style="animation-delay: 1.5s">
+            <animateMotion dur="4.5s" begin="1.5s" repeatCount="indefinite"
+              path="M10 87 L25 93 L40 85 L45 65 L52 55 L58 47"/>
+          </circle>
+          <circle r="1.4" fill="url(#rtSparkG)" class="rt-spark">
+            <animateMotion dur="5s" begin="0.7s" repeatCount="indefinite"
+              path="M58 47 L52 55 L45 65 L40 85 L25 93"/>
+          </circle>
+
+          <!-- Electric sparks travelling along the CYAN (blue) route -->
+          <circle r="1.6" fill="url(#rtSparkC)" class="rt-spark">
+            <animateMotion dur="4s" repeatCount="indefinite"
+              path="M28 52 L35 45 L42 38 L48 32 L54 30 L60 35 L62 45"/>
+          </circle>
+          <circle r="1.4" fill="url(#rtSparkC)" class="rt-spark">
+            <animateMotion dur="4s" begin="1.3s" repeatCount="indefinite"
+              path="M28 52 L35 45 L42 38 L48 32 L54 30 L60 35 L62 45"/>
+          </circle>
+          <circle r="1.4" fill="url(#rtSparkC)" class="rt-spark">
+            <animateMotion dur="4.5s" begin="0.6s" repeatCount="indefinite"
+              path="M62 45 L60 35 L54 30 L48 32 L42 38 L35 45"/>
+          </circle>
+        </svg>
+      </div>
+
+      <!-- Stats panel (right side of the image) -->
+      <div class="rt-stats">
+        <div class="rt-row"><span class="rt-label">Active Loads</span><span class="rt-val">+6 <em>+5</em></span></div>
+        <div class="rt-row"><span class="rt-label">In Transit</span><span class="rt-val">86 <em>+5</em></span></div>
+        <div class="rt-row"><span class="rt-label">Delivered Today</span><span class="rt-val">24 <em>+3</em></span></div>
+        <div class="rt-row"><span class="rt-label">Available Trucks</span><span class="rt-val">42 <em>+6</em></span></div>
+        <a class="rt-link">View Full Overview →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- AI-Powered Automation — image-bg variant -->
+  <div class="trio-card trio-card--ai-img">
+    <div class="trio-head">AI-POWERED AUTOMATION</div>
+    <div class="ai-img-body">
+      <img src="images/AIPOWEREDAUTOMATION.png" alt="" class="ai-img-bg" />
+
+      <!-- Activity: random electric arc discharges between hex corners -->
+      <svg class="ai-activity" viewBox="0 0 100 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path class="ai-bolt"                              d="M42 23 L46 21.5 L50 25 L54 22 L58 23"/>
+        <path class="ai-bolt" style="animation-delay:.9s"  d="M58 23 L60.5 27 L57 30 L60.5 34 L58 37"/>
+        <path class="ai-bolt" style="animation-delay:1.8s" d="M58 37 L54 39 L50 36 L46 39 L42 37"/>
+        <path class="ai-bolt" style="animation-delay:2.7s" d="M42 37 L39.5 34 L43 30 L39.5 26 L42 23"/>
+        <path class="ai-bolt" style="animation-delay:3.6s" d="M42 23 L46 27 L50 24 L54 28 L58 37"/>
+        <path class="ai-bolt" style="animation-delay:4.5s" d="M58 23 L54 28 L50 31 L46 28 L42 37"/>
+      </svg>
+
+      <!-- Left slots -->
+      <div class="aslot p-tl"><b>AI Dispatcher</b><span>Smart load assignments</span></div>
+      <div class="aslot p-ml"><b>AI Damage Detection</b><span>Analyze photos &amp; estimate repair costs</span></div>
+      <div class="aslot p-bl"><b>AI Email Automation</b><span>Auto-reply to emails &amp; follow ups</span></div>
+
+      <!-- Center hex label -->
+      <div class="ahex-label">AI</div>
+
+      <!-- Right slots -->
+      <div class="aslot p-tr"><b>AI Analytics</b><span>Predictive insights to increase your profits</span></div>
+      <div class="aslot p-mr"><b>AI Voice Assistant</b><span>Hands-free AI dispatcher</span></div>
+      <div class="aslot p-br"><b>AI Document Scanner</b><span>Extracts data from any document instantly</span></div>
+    </div>
+  </div>
+
+  <!-- Driver Mobile App Preview — image-bg variant -->
+  <div class="trio-card trio-card--driver-img">
+    <div class="trio-head">DRIVER MOBILE APP PREVIEW</div>
+    <div class="driver-img-body">
+      <img src="images/DRIVER_MOBILE_APP_PREVIEW.png" alt="" class="driver-img-bg" />
+
+      <!-- Interactive phone UI overlay (positioned over the phone screen) -->
+      <div class="phone-ui">
+        <div class="ph-statusbar">
+          <span class="ph-time">9:41</span>
+          <span class="ph-sig">●●●● 5G</span>
+        </div>
+        <div class="ph-greet">
+          <span class="ph-hello">Hi, Alex</span>
+          <span class="ph-id">L-1003</span>
+        </div>
+        <div class="ph-route-card">
+          <div class="ph-route-row">
+            <span class="ph-dot ph-dot--blue"></span>
+            <div>
+              <span class="ph-city">New York, NY</span>
+              <span class="ph-rl">Pickup</span>
+            </div>
+          </div>
+          <div class="ph-route-line"></div>
+          <div class="ph-route-row">
+            <span class="ph-dot ph-dot--orange"></span>
+            <div>
+              <span class="ph-city">Dallas, TX</span>
+              <span class="ph-rl">Delivery</span>
+            </div>
+          </div>
+          <div class="ph-foot">
+            <div class="ph-rate">
+              <span class="ph-rl">Rate</span>
+              <span class="ph-price">$2,400</span>
+            </div>
+            <span class="ph-badge">In Transit</span>
+          </div>
+        </div>
+        <div class="ph-progress">
+          <div class="ph-progress-fill"></div>
+          <span class="ph-progress-lbl">Trip Progress · 68%</span>
+        </div>
+      </div>
+
+      <!-- 5 feature labels positioned next to the baked-in icons -->
+      <div class="df-slot df-1"><b>Auto BOL Generation</b><span>Send to Telegram</span></div>
+      <div class="df-slot df-2"><b>Real-time Updates</b><span>Instant notifications</span></div>
+      <div class="df-slot df-3"><b>AI Chat Assistant</b><span>24/7 Support</span></div>
+      <div class="df-slot df-4"><b>Document Storage</b><span>All in one place</span></div>
+      <div class="df-slot df-5"><b>Yard &amp; App Instructions</b><span>Step-by-step guides</span></div>
+    </div>
+  </div>
+ </div>
+</section>
+
+<!-- ============= INTEGRATIONS ============= -->
+<section class="integrations" id="integrations">
+  <div class="integrations-head">
+    <span class="line-dash"></span>
+    <h4 class="integrations-title">INTEGRATIONS</h4>
+    <span class="line-dash"></span>
+  </div>
+  <div class="integration-row">
+    <div class="ilogo">
+      <span class="i-mark sd">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="#FF6B00"><path d="M13 2L4 14h6l-2 8 9-12h-6z"/></svg>
+      </span>
+      <div class="i-text">
+        <b>SUPER</b>
+        <b>DISPATCH</b>
+      </div>
+    </div>
+    <div class="ilogo">
+      <span class="i-mark gmail">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+          <path d="M3 6l9 7 9-7" stroke="#EA4335" stroke-width="2" fill="none"/>
+          <rect x="3" y="5" width="18" height="14" rx="2" stroke="#EA4335" stroke-width="2" fill="none"/>
+        </svg>
+      </span>
+      <span class="i-name">Gmail</span>
+    </div>
+    <div class="ilogo">
+      <span class="i-mark gmaps">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+          <path d="M12 2C8 2 5 5 5 9c0 5 7 13 7 13s7-8 7-13c0-4-3-7-7-7z" fill="#4285F4" stroke="#1A73E8" stroke-width="0.5"/>
+          <circle cx="12" cy="9" r="2.5" fill="white"/>
+        </svg>
+      </span>
+      <div class="i-text">
+        <b>Google</b>
+        <b>Maps</b>
+      </div>
+    </div>
+    <div class="ilogo">
+      <span class="i-mark samsara">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="#00C853"><path d="M12 2L4 8v8l8 6 8-6V8z" opacity="0.95"/></svg>
+      </span>
+      <span class="i-name">samsara</span>
+    </div>
+    <div class="ilogo">
+      <span class="i-mark motive">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="#FF6900"><path d="M4 12c0-4 4-8 8-8s8 4 8 8" stroke="#FF6900" stroke-width="2" fill="none"/></svg>
+      </span>
+      <span class="i-name i-italic">motive</span>
+    </div>
+    <div class="ilogo">
+      <span class="i-mark qb">qb</span>
+      <span class="i-name">QuickBooks</span>
+    </div>
+    <div class="ilogo">
+      <span class="i-mark stripe">S</span>
+      <span class="i-name i-italic">stripe</span>
+    </div>
+    <div class="ilogo">
+      <span class="i-mark tg">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M22 3L1 11l6 2 2 7 4-4 6 5 3-18z"/></svg>
+      </span>
+      <span class="i-name">Telegram</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============= FOOTER ============= -->
+<footer class="footer">
+  <div class="footer-grid">
+    <div class="f-brand">
+      <a href="#" class="logo">
+        <img src="images/logo.png" alt="ONE PRO DEVELOPING" class="logo-img" />
+      </a>
+      <p class="f-desc">Building the most powerful all-in-one platform for auto transport companies. One Platform. All Operations. Maximum Profit.</p>
+      <div class="f-social">
+        <a href="#" aria-label="Facebook"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M22 12a10 10 0 10-11.6 9.9V15h-2.5v-3h2.5v-2.3c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.3 0-1.7.8-1.7 1.6V12h2.9l-.5 3h-2.5v6.9A10 10 0 0022 12z"/></svg></a>
+        <a href="#" aria-label="Instagram"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="4"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.8" fill="currentColor"/></svg></a>
+        <a href="#" aria-label="LinkedIn"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M4 4h4v4H4zM4 10h4v10H4zM10 10h4v1.5c.7-1 2-1.8 3.5-1.8 3 0 4.5 2 4.5 5V20h-4v-4.5c0-1.4-.5-2.5-2-2.5s-2 1-2 2.5V20h-4z"/></svg></a>
+        <a href="#" aria-label="YouTube"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M23 7.5s-.2-1.6-.9-2.3c-.8-.9-1.8-.9-2.2-1C16.6 4 12 4 12 4s-4.6 0-7.9.2c-.5.1-1.4.1-2.2 1C1.2 5.9 1 7.5 1 7.5S.8 9.4.8 11.3v1.4c0 1.9.2 3.8.2 3.8s.2 1.6.9 2.3c.8.9 1.9.9 2.4 1C6 20 12 20 12 20s4.6 0 7.9-.2c.5-.1 1.4-.1 2.2-1 .7-.7.9-2.3.9-2.3s.2-1.9.2-3.8v-1.4c0-1.9-.2-3.8-.2-3.8zM10 14.5v-5l5 2.5z"/></svg></a>
+      </div>
+    </div>
+
+    <div class="f-col">
+      <h5>PRODUCT</h5>
+      <a>Features</a>
+      <a>Pricing</a>
+      <a>Integrations</a>
+      <a>Updates</a>
+    </div>
+
+    <div class="f-col">
+      <h5>SOLUTIONS</h5>
+      <a>Car Carriers</a>
+      <a>Dispatch Companies</a>
+      <a>Owner Operators</a>
+      <a>Fleet Owners</a>
+    </div>
+
+    <div class="f-col">
+      <h5>COMPANY</h5>
+      <a>About Us</a>
+      <a>Careers</a>
+      <a>Contact Us</a>
+      <a>Blog</a>
+    </div>
+
+    <div class="f-col cta-col">
+      <h5>GET STARTED</h5>
+      <button class="btn btn-primary">BOOK A DEMO</button>
+      <button class="btn btn-outline">START FREE TRIAL</button>
+    </div>
+
+    <div class="f-col support">
+      <div class="support-card support-card--img">
+        <div class="support-content">
+          <div class="support-badge">24/7 AI SUPPORT</div>
+          <div class="support-title">AI Assistant</div>
+          <div class="support-status"><span class="dot"></span> Online</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bot">
+    <span>© 2025 ONE PRO SYSTEMS. All rights reserved.</span>
+    <div class="footer-links"><a>Privacy Policy</a><a>Terms of Service</a></div>
+  </div>
+</footer>
+
+</body>
+</html>
